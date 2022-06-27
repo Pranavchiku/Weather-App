@@ -46,6 +46,6 @@ flutter upgrade
 ```
 ## Preview
 <p float="left">
-<img src = "https://github.com/Pranavchiku/Document-Wallet-App/blob/main/images/app%20image.jpeg" width="200" height="444">
+<img src = "https://github.com/Pranavchiku/Weather-App/blob/main/images/app%20image.jpg" width="522" height="392">
 
 </p>
