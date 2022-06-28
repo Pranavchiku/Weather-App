@@ -7,13 +7,14 @@ import 'package:geolocator/geolocator.dart';
 class WeatherApi {
   static Future<Weather> fetchWeather() async {
     String? uri =
-        "http://api.weatherapi.com/v1/current.json?key=984fd85ccdce4550947184750222706&q=";
+        "http://api.weatherapi.com/v1/forecast.json?key=984fd85ccdce4550947184750222706&q=";
 
     await Geolocator.getCurrentPosition().then((Position position) {
       uri = uri! +
           position.latitude.toString() +
           ',' +
           position.longitude.toString();
+      uri = uri! + "&days=1&aqi=no&alerts=no";
     });
 
     final response = await http.get(Uri.parse(uri!));

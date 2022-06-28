@@ -15,8 +15,9 @@ import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 class overallWeatherCard extends StatefulWidget {
   double? tempC;
   String? city;
-
-  overallWeatherCard({required this.tempC, required this.city});
+  String? imagePath;
+  overallWeatherCard(
+      {required this.tempC, required this.city, required this.imagePath});
 
   @override
   State<overallWeatherCard> createState() => _overallWeatherCardState();
@@ -54,7 +55,7 @@ class _overallWeatherCardState extends State<overallWeatherCard> {
           const SizedBox(
             height: 20,
           ),
-          temperature(temp: widget.tempC),
+          temperature(temp: widget.tempC, imagePath: widget.imagePath),
           const SizedBox(
             height: 20,
           ),
